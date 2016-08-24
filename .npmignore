@@ -1,0 +1,7 @@
+.*
+*.yml
+*.log
+*.md
+docs
+test
+example

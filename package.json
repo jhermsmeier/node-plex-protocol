@@ -1,0 +1,37 @@
+{
+  "name": "plex-protocol",
+  "version": "0.0.0",
+  "description": "Plex HTTP API",
+  "license": "MIT",
+  "keywords": [
+    "plex",
+    "api",
+    "media",
+    "server",
+    "mediaserver"
+  ],
+  "main": "lib/plex.js",
+  "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de/)",
+  "dependencies": {
+    "async": "~2.0.1",
+    "request": "~2.74.0",
+    "xml-parser": "~1.2.1"
+  },
+  "devDependencies": {
+    "mocha": "~3.0.2"
+  },
+  "homepage": "https://github.com/jhermsmeier/node-plex-protocol",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhermsmeier/node-plex-protocol.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jhermsmeier/node-plex-protocol/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --ui tdd"
+  }
+}
