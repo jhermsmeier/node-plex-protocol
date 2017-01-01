@@ -32,6 +32,7 @@
     "url": "https://github.com/jhermsmeier/node-plex-protocol/issues"
   },
   "directories": {
+    "doc": "doc",
     "test": "test"
   },
   "scripts": {
