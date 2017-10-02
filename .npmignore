@@ -1,7 +1,8 @@
 .*
-*.yml
-*.log
 *.md
-docs
-test
+*.log
+
+benchmark
+doc
 example
+test
