@@ -13,7 +13,6 @@
   ],
   "main": "lib/plex.js",
   "dependencies": {
-    "async": "^2.5.0",
     "camelcase": "^4.1.0",
     "debug": "^3.1.0",
     "pluralize": "^7.0.0",
