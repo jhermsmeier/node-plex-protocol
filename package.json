@@ -2,6 +2,7 @@
   "name": "plex-protocol",
   "version": "0.0.0",
   "description": "Plex HTTP API",
+  "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de)",
   "license": "MIT",
   "keywords": [
     "plex",
@@ -11,13 +12,12 @@
     "mediaserver"
   ],
   "main": "lib/plex.js",
-  "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de/)",
   "dependencies": {
     "async": "^2.5.0",
     "camelcase": "^4.1.0",
     "debug": "^3.1.0",
     "pluralize": "^7.0.0",
-    "request": "^2.83.0",
+    "simple-get": "^2.7.0",
     "xml-parser": "~1.2.1"
   },
   "devDependencies": {
@@ -31,11 +31,7 @@
   "bugs": {
     "url": "https://github.com/jhermsmeier/node-plex-protocol/issues"
   },
-  "directories": {
-    "doc": "doc",
-    "test": "test"
-  },
   "scripts": {
-    "test": "mocha --ui tdd"
+    "test": "mocha"
   }
 }
