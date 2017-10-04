@@ -16,7 +16,9 @@ $ npm install --save plex-protocol
 
 - [Usage](#usage)
   - [Creating a Client](#creating-a-client)
+  - [Identity](#identity)
   - [General Information](#general-information)
+  - [Search](#search)
 
 <!-- /MarkdownTOC -->
 
@@ -32,6 +34,24 @@ var Plex = require( 'plex-protocol' )
 var client = new Plex.Client({
   url: `http://127.0.0.1:32400/`,
 })
+```
+
+### Identity
+
+```js
+client.identity( function( error, data ) {
+  console.log( error || data )
+})
+
+```
+
+```js
+{
+  _element: 'MediaContainer',
+  size: '0',
+  machineIdentifier: '990745400819dd8281d74fff91def2ec0056714c',
+  version: '1.5.5.3634-995f1dead'
+}
 ```
 
 ### General Information
@@ -106,4 +126,15 @@ client.getInfo( function( error, info ) {
     updater: { count: 1, title: 'updater' }
   }
 }
+```
+
+### Search
+
+```js
+client.search({
+  query: 'Homer',
+  year: '2016',
+}, function( error, data ) {
+  console.log( error || data )
+})
 ```
