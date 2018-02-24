@@ -1,6 +1,6 @@
 {
   "name": "plex-protocol",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Plex HTTP API",
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de)",
   "license": "MIT",
