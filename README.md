@@ -15,10 +15,18 @@ $ npm install --save plex-protocol
 <!-- MarkdownTOC -->
 
 - [Usage](#usage)
-  - [Creating a Client](#creating-a-client)
-  - [Identity](#identity)
-  - [General Information](#general-information)
-  - [Search](#search)
+    - [Creating a Client](#creating-a-client)
+    - [Identity](#identity)
+    - [General Information](#general-information)
+    - [Search](#search)
+    - [Making requests](#making-requests)
+    - [Getting account information](#getting-account-information)
+    - [List clients](#list-clients)
+    - [List sessions](#list-sessions)
+    - [List servers](#list-servers)
+    - [Get preferences](#get-preferences)
+- [Examples](#examples)
+    - [Remotely installing a plugin](#remotely-installing-a-plugin)
 
 <!-- /MarkdownTOC -->
 
@@ -132,9 +140,78 @@ client.getInfo( function( error, info ) {
 
 ```js
 client.search({
-  query: 'Homer',
+  query: 'Something',
   year: '2016',
 }, function( error, data ) {
   console.log( error || data )
+})
+```
+
+### Making requests
+
+```js
+client.get( '/library/sections/2/all', function( error, data ) {
+  // ...
+})
+```
+
+### Getting account information
+
+```js
+client.account( function( error, data ) {
+  // ...
+})
+```
+
+### List clients
+
+```js
+client.clients( function( error, data ) {
+  // ...
+})
+```
+
+### List sessions
+
+```js
+client.sessions( function( error, data ) {
+  // ...
+})
+```
+
+### List servers
+
+```js
+client.servers( function( error, data ) {
+  // ...
+})
+```
+
+### Get preferences
+
+```js
+client.preferences( function( error, data ) {
+  // ...
+})
+```
+
+```js
+client.systemPreferences( function( error, data ) {
+  // ...
+})
+```
+
+## Examples
+
+### Remotely installing a plugin
+
+```js
+var pluginId = 'com.plexapp.plugins.vice'
+var client = new Plex.Client({
+  url: 'http://127.0.0.1:32400/',
+})
+
+client.get( `/system/appstore/apps/${pluginId}/install`, function( error, result ) {
+  // ...
 })
 ```
